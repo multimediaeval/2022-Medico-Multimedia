@@ -1,1 +1,1 @@
-# 2022-Medico-Multimedia-
+# 2022-Medico-Multimedia
