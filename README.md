@@ -165,5 +165,5 @@ Please contact your task organizers with any questions on these points.
 * 1 August 2022: Data release.
 * 1 November 2022: Runs due and results returned.
 * 20 November 2022: Results returned.  <!--Latest possible should be 23 November-->
-* 28 November 2022: Working notes paper.  <!-- Fixed. Please do not change.-->
+* 5 December 2022: Working notes paper.  <!-- Fixed. Please do not change.-->
 * 12-13 January 2023: 13th Annual MediaEval Workshop, Collocated with [MMM 2023](https://www.mmm2023.no/) in Bergen, Norway and also online. <!-- Fixed. Please do not change.-->
