@@ -1,4 +1,4 @@
-# 2022-Medico-Multimedia
+# Medical Multimedia Task: Transparent Tracking of Spermatozoa
 
 *See the [MediaEval 2022 webpage](https://multimediaeval.github.io/editions/2022/) for information on how to register and participate.*
 
