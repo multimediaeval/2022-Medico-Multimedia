@@ -2,7 +2,9 @@
 
 **See the [MediaEval 2022 webpage](https://multimediaeval.github.io/editions/2022/) for information on how to register and participate.*
 
-**Dataset is avaiable now [\[Download link 1 - Kaggle\]](https://www.kaggle.com/datasets/vlbthambawita/visemtracking) [\[Download link 2 - Simula-dataset\]](https://datasets.simula.no/visem-tracking/)*
+**Development dataset is avaiable now [\[Download link 1 - Kaggle\]](https://www.kaggle.com/datasets/vlbthambawita/visemtracking) [\[Download link 2 - Simula-dataset\]](https://datasets.simula.no/visem-tracking/)*
+
+**Testing dataset is avaiable now [\[Download link\]](https://www.dropbox.com/sh/2ohitza5ouzh2d3/AAD_8VnvdhPqOVlCcAn21Uc8a?dl=0)*
 
 ### Task Description
 The 2022 Medico task tackles the challenge of tracking sperm cells of video recordings of spermatozoa. The development dataset contains 20 videos, each one is 30 seconds long, a set of sperm characteristics (hormones, fatty acids data, etc.), frame-by-frame bounding box annotations, some anonymized study participants-related data, and motility and morphology data following the WHO guidelines. The goal is to encourage task participants to track individual sperms in real-time and combine different data sources to predict common measurements used for sperm quality assessment, specifically the motility (movement) spermatozoa (living sperm).
