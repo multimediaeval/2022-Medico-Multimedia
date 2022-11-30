@@ -1,0 +1,1 @@
+from .medico import Medico
