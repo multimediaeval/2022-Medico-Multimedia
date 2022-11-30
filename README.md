@@ -1,8 +1,10 @@
 # Medical Multimedia Task: Transparent Tracking of Spermatozoa
 
-*See the [MediaEval 2022 webpage](https://multimediaeval.github.io/editions/2022/) for information on how to register and participate.*
+**See the [MediaEval 2022 webpage](https://multimediaeval.github.io/editions/2022/) for information on how to register and participate.*
 
-#### Task Description
+**Dataset is avaiable now [\[Download link 1 - Kaggle\]](https://www.kaggle.com/datasets/vlbthambawita/visemtracking) [\[Download link 2 - Simula-dataset\]](https://datasets.simula.no/visem-tracking/)*
+
+### Task Description
 The 2022 Medico task tackles the challenge of tracking sperm cells of video recordings of spermatozoa. The development dataset contains 20 videos, each one is 30 seconds long, a set of sperm characteristics (hormones, fatty acids data, etc.), frame-by-frame bounding box annotations, some anonymized study participants-related data, and motility and morphology data following the WHO guidelines. The goal is to encourage task participants to track individual sperms in real-time and combine different data sources to predict common measurements used for sperm quality assessment, specifically the motility (movement) spermatozoa (living sperm).
 
 We hope that this task will encourage the multimedia community to aid in the development of computer-assisted reproductive health and discover new and clever ways of analyzing multimodal datasets. In addition to good analysis performance, an important aspect is also the efficiency of the algorithms due to the fact that the assessment of the sperm is performed in real-time and therefore requires real-time feedback.
@@ -19,13 +21,13 @@ For the task, we will provide a dataset of videos and other data from 20 differe
  
 For both Subtasks 2 and 3, task-participants are asked to perform video analysis over single frame analysis. This is important due to the fact that single frame-based analysis will not be able to catch the movement of the spermatozoa (motility) which contains important information to perform the predictions on Subtasks 2 and 3.
 
-#### Motivation and background
+### Motivation and background
 Manual evaluation of a sperm sample using a microscope is time-consuming and requires costly experts who have extensive training. In addition, the validity of manual sperm analysis becomes unreliable due to limited reproducibility and high inter-personnel variations due to the complexity of tracking, identifying, and counting sperms in fresh samples. The existing computer-aided sperm analyzer systems are not working well enough for application in a real clinical setting due to unreliability caused by the consistency of the semen sample. Therefore, we need to research new methods for automated sperm analysis. 
 
-#### Target group
+### Target group
 The task is of interest to researchers in the areas of machine learning (classification), visual content analysis and multimodal fusion. Overall, this task is intended to encourage the multimedia community to help improve the health care system through application of their knowledge and methods to reach the next level of computer and multimedia assisted diagnosis, detection and interpretation. 
 
-#### Data
+### Data
 The task uses the data set VISEM [2], which contains data from 85 male participants aged 18 years or older. For this task, we have selected only 30 seconds video clips from selected 20 videos. For each participant, we include a set of measurements from a standard semen analysis, a video of live spermatozoa, a sperm fatty acid profile, the fatty acid composition of serum phospholipids, study participants-related data, and WHO analysis data. The dataset contains 20 videos, with each video has 30 seconds duration with corresponding bounding box coordinates. Each video has a resolution of 640x480 and runs at 50 frames-per-second. The dataset contains in total six CSV files (five for data and one which maps video IDs to study participants' IDs), a description file, and  folders containing the videos and bounding box data. The name of each video file contains the video's ID, the date it was recorded, and a small optional description. Then, the end of the filename contains the code of the person who assessed the video. Furthermore, VISEM contains five CSV files for each of the other data provided, a CSV file with the IDs linked to each video, and a text file containing * descriptions of some of the columns of the CSV files. One row in each CSV file represents a participant. The provided CSV files are:
 * semen_analysis_data: The results of standard semen analysis.
 * fatty_acids_spermatozoa: The levels of several fatty acids in the spermatozoa of the participants.
@@ -36,14 +38,7 @@ The task uses the data set VISEM [2], which contains data from 85 male participa
 
 All Study participants agreed to donate their data for the purpose of science and provided the necessary consent for us to be able to distribute the data (checked and approved by the Norwegian data authority and ethical committee).
 
-##### Development data is available now:
-* [Data download link 1 - Kaggle](https://www.kaggle.com/datasets/vlbthambawita/visemtracking)
-* [Data download link 2 - Simula-dataset](https://datasets.simula.no/visem-tracking/)
-
-#### Ground truth
-The ground truth data provided in this task were prepared by expert computer scientists and verified by domain experts.
-
-#### Evaluation
+### Evaluation
 Different evaluation criteria are used based on the task that is to be evaluated. For task 1, we allow for detection and tracking predictions, where we evaluate using standard tracking metrics like HOTA and detection metrics like recall and precision. The scripts used to evaluate the submissions are based on TrackEval (https://github.com/JonathonLuiten/TrackEval), which supports the evaluation of several benchmarks with multiple metrics. The scripts used can be found under the `evaluation` directory in this repository. More information about the specific metrics can be found in the TrackEval repository: https://github.com/JonathonLuiten/TrackEval.
 
 ### Test data downlod link
@@ -132,19 +127,19 @@ In this task, you have to highlight the fastest sperms and detect and track them
 #### Sub-task 4 (Optional):
 You can upload PDF files, Jupiter notebooks, or/and video files explaining your approaches and results of Sub-task 4. The submission of Sub-task 4 will be evaluated manually.
 
-#### Quest for insight
+### Quest for insight
 Here are several research questions related to this challenge that participants can strive to answer in order to go beyond just looking at the evaluation metrics: 
 * Will continued tracking of sperm help to analyze the motility level of sperm samples?
 * How do we calculate the average speed of moving sperms, and how to track the fastest one among many moving sperms?
 * How can we best communicate to doctors about the accuracy, reliability, and trustworthiness of the output of Deep Learning methods?
 
-#### Participant information
+### Participant information
 Please contact your task organizers with any questions on these points. 
 * Signing up: Fill in the [registration form](https://forms.gle/JcKoa5ycxR2KEiTJ7) and fill out and return the [usage agreement](https://multimediaeval.github.io/editions/2022/docs/MediaEval2022_UsageAgreement.pdf).
 * Making your submission: To be announced (check the task read me) <!-- Please add instructions on how to create and submit runs to your task replacing "To be announced." -->
 * Preparing your working notes paper: Instructions on preparing you working notes paper can be found in [MediaEval 2022 Working Notes Paper Instructions](https://docs.google.com/document/d/12uSn0rRYxa3buiFNEbpa46dKsHOyqV2PHU_joRGMHRw).
 
-#### References and recommended reading
+### References and recommended reading
 [1] Riegler, Michael, et al. "Multimedia and Medicine: Teammates for Better Disease Detection and Survival." Proceedings of the 2016 ACM on Multimedia Conference. ACM, 2016.
 
 [2] Trine B. Haugen, Steven A. Hicks, Jorunn M. Andersen, Oliwia Witczak, Hugo L. Hammer, Rune Borgli, Pål Halvorsen, and Michael Riegler. 2019. VISEM: a multimodal video dataset of human spermatozoa. In Proceedings of the 10th ACM Multimedia Systems Conference (MMSys '19). Association for Computing Machinery, New York, NY, USA, 261–266. DOI:https://doi.org/10.1145/3304109.3325814
@@ -156,7 +151,7 @@ Please contact your task organizers with any questions on these points.
 [5] Thambawita, V., Halvorsen, P., Hammer, H., Riegler, M., & Haugen, T. B. (2019). Extracting temporal features into a spatial domain using autoencoders for sperm video analysis. arXiv preprint arXiv:1911.03100.
 
 
-#### Task organizers
+### Task organizers
 * Vajira Thambawita, vajira@simula.no, SimuaMet
 * Steven Hicks, steven@simula.no, SimulaMet
 * Andrea Storås , andrea@simula.no, SimulaMet
@@ -164,7 +159,7 @@ Please contact your task organizers with any questions on these points.
 * Michael Riegler, michael@simula.no, SimulaMet
 * Pål Halvorsen, paalh@simula.no, SimulaMet
 
-#### Task Schedule
+### Task Schedule
 * 1 August 2022: Data release.
 * 1 November 2022: Runs due and results returned.
 * 20 November 2022: Results returned.  <!--Latest possible should be 23 November-->
