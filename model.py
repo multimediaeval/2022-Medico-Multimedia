@@ -17,3 +17,13 @@ def SqueezeAndExcite(inputs, ratio=8):
     se = Dense(filters, activation='sigmoid', kernel_initializer='he_normal', use_bias=False)(se)
     x = init * se
     return x
+
+def ASPP(inputs):
+    """ Image Pooling """
+    shape = inputs.shape
+    y1 = AveragePooling2D(pool_size=(shape[1], shape[2]))(inputs)
+    y1 = Conv2D(256, 1, padding="same", use_bias=False)(y1)
+    y1 = BatchNormalization()(y1)
+    y1 = Activation("relu")(y1)
+    y1 = UpSampling2D((shape[1], shape[2]), interpolation="bilinear")(y1)
+    y1 = Attention()([y1, y1])
