@@ -49,3 +49,12 @@ def ASPP(inputs):
     #y4 = reshape(y4, y4.shape[1:])
     y4 = Attention()([y4, y4])
     
+
+        """ 3x3 conv rate=18 """
+    y5 = Conv2D(256, 3, padding="same", use_bias=False, dilation_rate=18)(inputs)
+    y5 = BatchNormalization()(y5)
+    y5 = Activation("relu")(y5)
+    #y5 = reshape(y5, y5.shape[1:])
+    y5 = Attention()([y5, y5])
+    
+    
