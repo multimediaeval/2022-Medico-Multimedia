@@ -27,3 +27,12 @@ def ASPP(inputs):
     y1 = Activation("relu")(y1)
     y1 = UpSampling2D((shape[1], shape[2]), interpolation="bilinear")(y1)
     y1 = Attention()([y1, y1])
+
+        """ 1x1 conv """
+    y2 = Conv2D(256, 1, padding="same", use_bias=False)(inputs)
+    y2 = BatchNormalization()(y2)
+    y2 = Activation("relu")(y2)
+    #y2 = reshape(y2, y2.shape[1:])
+    
+    y2 = Attention()([y2, y2])
+    
