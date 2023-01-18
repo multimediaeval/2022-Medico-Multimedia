@@ -58,3 +58,9 @@ def ASPP(inputs):
     y5 = Attention()([y5, y5])
     
     
+    y = Concatenate()([y1, y2, y3, y4, y5])
+    y = Conv2D(256, 1, padding="same", use_bias=False)(y)
+    y = BatchNormalization()(y)
+    y = Activation("relu")(y)
+
+    return y
