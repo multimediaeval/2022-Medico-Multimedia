@@ -16,3 +16,21 @@ from train import create_dir, load_data
 
 H = 256
 W = 256
+
+def read_image(path):
+    x = cv2.imread(path, cv2.IMREAD_COLOR)  ## (H, W, 3)
+    x = cv2.resize(x, (W, H))
+    ori_x = x
+    x = x/255.0
+    x = x.astype(np.float32)
+    x = np.expand_dims(x, axis=0)
+    return ori_x, x                                ## (1, 256, 256, 3)
+
+
+def read_mask(path):
+    x = cv2.imread(path, cv2.IMREAD_GRAYSCALE)  ## (H, W)
+    x = cv2.resize(x, (W, H))
+    ori_x = x
+    x = x/255.0
+    x = x.astype(np.int32)                    ## (256, 256)
+    return ori_x, x
